@@ -72,7 +72,7 @@ class FeedsController < ApplicationController
     render :new if @feed.invalid?
 
   end
-  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_feed
@@ -81,6 +81,6 @@ class FeedsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def feed_params
-      params.require(:feed).permit(:image, :image_cache, :post)
+      params.require(:feed).permit(:image, :image_cache, :post, :user_id, :id)
     end
 end
