@@ -21,10 +21,6 @@ class FeedsController < ApplicationController
     end
   end
 
-  def confirm
-    @feed = Feed.new(feed_params)
-
-  end
   # GET /feeds/1/edit
   def edit
   end
@@ -33,6 +29,7 @@ class FeedsController < ApplicationController
   # POST /feeds.json
   def create
     @feed = Feed.new(feed_params)
+    @feed.user_id = current_user.id
 
     respond_to do |format|
       if @feed.save
@@ -69,6 +66,13 @@ class FeedsController < ApplicationController
     end
   end
 
+  def confirm
+    @feed = Feed.new(feed_params)
+    @feed.user_id = current_user.id
+    render :new if @feed.invalid?
+
+  end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_feed
