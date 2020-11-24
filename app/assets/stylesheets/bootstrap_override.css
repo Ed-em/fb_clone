@@ -15,3 +15,15 @@
 .navbar-default .navbar-nav > li > a {
     color: #FFF;
 }
+
+.navbar-center > li {
+  color: #FFF;
+  margin left: auto;
+  margin-right: auto;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  margin:0 auto;
+  padding: 10px;
+}
