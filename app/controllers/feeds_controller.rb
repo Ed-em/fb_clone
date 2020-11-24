@@ -66,11 +66,11 @@ class FeedsController < ApplicationController
   end
 
   private
-    def set_feed
-      @feed = Feed.find(params[:id])
-    end
+  def set_feed
+    @feed = Feed.find(params[:id])
+  end
 
-    def feed_params
-      params.require(:feed).permit(:image, :image_cache, :post, :user_id, :id)
-    end
+  def feed_params
+    params.require(:feed).permit(:image, :image_cache, :post, :user_id, :id)
+  end
 end
