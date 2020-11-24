@@ -502,55 +502,9 @@ button.btn-link {
     padding-left: 43px;
 }
 
-.entry-content .gallery {
-    margin: 0;
-    list-style: none;
-    padding: 0;
-}
-
-.entry-content .gallery,
-.m-error {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
-.entry-content .gallery > li {
-    padding-right: 20px;
-    -ms-flex-preferred-size: 0;
-    flex-basis: 0;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    max-width: 100%;
-}
-
 .gallery > li img {
     max-width: 100%;
     height: auto;
-}
-
-.entry-content blockquote:last-child,
-p:last-child,
-table:last-child,
-ul:last-child {
-    margin-bottom: 0;
-}
-
-.entry-content blockquote:last-child,
-p:last-child,
-table:last-child,
-ul:last-child {
-    margin-bottom: 0;
-}
-
-.entry-content blockquote p:before {
-    content: "\f10d";
-    color: #999;
-    margin-right: 12px;
-    font-family: "FontAwesome";
-    font-size: 24px;
-    font-weight: 900;
 }
 
 .activity__list__header img {

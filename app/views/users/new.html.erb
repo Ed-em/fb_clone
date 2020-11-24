@@ -12,8 +12,6 @@
 <div id="signup">
   <section class="main-bkg">
     <div class="main-container">
-
-      <!-- Body -->
       <div class="col-left">
         <h2>Connect with friends and the<br>world around you on Facebook</h2>
         <table class="feature">
@@ -42,8 +40,8 @@
             </td>
           </tr>
         </table>
-      </div><!--
-      --><div class="col-right">
+      </div>
+      <div class="col-right">
         <h1>Sign Up</h1>
         <h3>Let's get started!</h3>
         <%= form_with(model: @user, local: true) do |f| %>
@@ -58,8 +56,7 @@
                                           placeholder: "Password confirmation" %>
           <%= f.submit "Create my account" %>
           <% end %>
-      </div><!-- end body -->
-
+      </div>
     </div>
   </section>
 </div>

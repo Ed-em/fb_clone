@@ -1,4 +1,17 @@
 .navbar {
   background-color: #45619e;
-  color: #f5fdff;
+  border: #45619e;
+}
+.nav.navbar-nav.navbar-right li {
+  color: white;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #FFF;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #FFF;
 }

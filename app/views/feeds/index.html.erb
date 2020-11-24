@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-
 <div class="panel">
   <div class="panel-heading">
     <h3 class="panel-title">Activity Feed</h3>
@@ -7,15 +6,13 @@
   <div class="panel-heading">
     <h3 class="panel-title"><%= link_to new_feed_path do %><span>New Post</span><% end %></h3>
   </div>
-
-<% @feeds.each do |feed| %>
-<ul class="panel-activity__list">
-  <li>
-    <i class="activity__list__icon fa fa-question-circle-o"></i>
+  <% @feeds.each do |feed| %>
+  <ul class="panel-activity__list">
+    <li>
       <div class="activity__list__header">
-      <strong><%= current_user.name%></strong><span> posted:</span>
+        <strong><%= current_user.name%></strong><span> posted:</span>
       </div>
-      <div class="activity__list__body entry-content">
+      <div class="activity__list__body ">
         <p>
           <%= feed.post %>
         </p>
@@ -31,5 +28,5 @@
       </div>
     </li>
   </ul>
-  </div>
   <% end %>
+</div>

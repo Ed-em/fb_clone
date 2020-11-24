@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field1">
-    <%= form.text_area :post %>
-  </div>
+    <div class="field1">
+      <%= form.text_area :post %>
+    </div>
 
-  <div class="field">
-    <%= image_tag(@feed.image.url) if @feed.image && @feed.image.url %>
-    <%= form.file_field :image %>
-    <%= form.hidden_field :image_cache %>
-  </div>
+    <div class="field">
+      <%= image_tag(@feed.image.url) if @feed.image && @feed.image.url %>
+      <%= form.file_field :image %>
+      <%= form.hidden_field :image_cache %>
+    </div>
 
-  <div class="actions">
+    <div class="actions">
     <%= form.submit "Post"%>
   </div>
 <% end %>

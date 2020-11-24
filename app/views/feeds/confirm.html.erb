@@ -3,7 +3,6 @@
 
 <h1>confirmation screen</h1>
 <%= form_with(model: @feed, url: feeds_path, local: true) do |form| %>
-  <!-- confirmation screenでDescription to display the uploaded image -->
   <%= image_tag(@feed.image.url) if @feed.image && @feed.image.url %>
   <%= form.hidden_field :image_cache %>
   <%= form.hidden_field :post %>
