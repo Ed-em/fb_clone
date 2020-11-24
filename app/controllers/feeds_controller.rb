@@ -36,6 +36,11 @@ class FeedsController < ApplicationController
     end
   end
 
+  def confirm
+    @feed = Feed.new(feed_params)
+    @feed.user_id = current_user.id
+    render :new if @feed.invalid?
+  end
 
   def update
     respond_to do |format|
@@ -49,20 +54,12 @@ class FeedsController < ApplicationController
     end
   end
 
-
   def destroy
     @feed.destroy
     respond_to do |format|
       format.html { redirect_to feeds_url, notice: 'Feed was successfully destroyed.' }
       format.json { head :no_content }
     end
-  end
-
-  def confirm
-    @feed = Feed.new(feed_params)
-    @feed.user_id = current_user.id
-    render :new if @feed.invalid?
-
   end
 
   private
